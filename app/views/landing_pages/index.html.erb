@@ -6,10 +6,11 @@
 <p><%= link_to @top_reviewed_product.name, product_path(@top_reviewed_product) %></p>
 
 <h3>Our Three Newest Products</h3>
-
+<ol>
 <% @newest_products.each do |product| %>
-<p><%= link_to product.name, product_path(product) %></p>
+<li><%= link_to product.name, product_path(product) %></li>
 <% end %>
+</ol>
 
 <h3>Products Made in The USA</h3>
 
