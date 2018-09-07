@@ -11,5 +11,7 @@ class Product < ActiveRecord::Base
     end)
 
   scope(:three_recent, -> { order(created_at: :desc).limit(3) })
-  
+
+  scope(:made_in_usa, -> {where(origin_country: "USA")})
+
 end
