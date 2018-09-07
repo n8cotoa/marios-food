@@ -1,5 +1,5 @@
 class LandingPagesController < ApplicationController
   def index
-    @products = Product.all
+    @top_reviewed_product = Product.top_reviewed[0]
   end
 end

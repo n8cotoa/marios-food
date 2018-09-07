@@ -1,7 +1,9 @@
 <h1><%= @product.name %></h1>
 <p>Cost: <%= @product.cost %></p>
 <p>Country of Origin: <%= @product.origin_country %></p>
+
 <hr>
+
 <p><%= link_to 'Home', products_path %></p>
 <p><%= link_to "Update #{@product.name}", edit_product_path(@product) %></p>
 <p><%= link_to "Delete #{@product.name}", product_path(@product),
@@ -19,5 +21,4 @@
   <%end%>
 <% else %>
   <h2>There are currently no reviews for this product.</h2>
-  <p><%= link_to 'Add Review', new_product_review_path(@product) %></p>
 <% end %>
