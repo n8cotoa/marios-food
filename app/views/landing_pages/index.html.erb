@@ -1,3 +1,10 @@
 <h1>Welcome to Marios Food</h1>
 
+<h3>Our Most Reviewed Product</h3>
 <p><%= @top_reviewed_product.name %></p>
+
+<h3>Our Three Newest Products</h3>
+
+<% @newest_products.each do |product| %>
+<p><%= link_to product.name, product_path(product) %></p>
+<% end %>

@@ -9,4 +9,7 @@ class Product < ActiveRecord::Base
     .group("products.id")
     .order("scount DESC")
     end)
+
+  scope(:three_recent, -> { order(created_at: :desc).limit(3) })
+  
 end
