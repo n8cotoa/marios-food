@@ -9,8 +9,7 @@
   <p><%= link_to 'Home', landing_pages_path %></p>
   <p><%= link_to "Update #{@product.name}", edit_product_path(@product) %></p>
   <p><%= link_to "Delete #{@product.name}", product_path(@product),
-    :data => {:confirm => "You sure?",
-    :method => "delete"} %>
+    :data => {:method => "delete"} %>
   </p>
   <p><%= link_to 'Add Review', new_product_review_path(@product) %></p>
 
