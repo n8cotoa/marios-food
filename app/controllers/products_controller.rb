@@ -16,6 +16,7 @@ class ProductsController < ApplicationController
     if @product.save
       redirect_to product_path(@product)
     else
+      flash[:alert] = "Product not added, see errors below:"
       render :new
     end
   end

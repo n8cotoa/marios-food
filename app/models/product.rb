@@ -19,8 +19,10 @@ class Product < ActiveRecord::Base
     self.reviews.each do |review|
       review_ratings.push(review.rating)
     end
-    avg_rating = review_ratings.reduce(:+)/review_ratings.length
-    avg_rating
+    if review_ratings != []
+      avg_rating = review_ratings.reduce(:+)/review_ratings.length
+      avg_rating
+    end
   end
 
 end

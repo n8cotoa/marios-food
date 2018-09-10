@@ -10,6 +10,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to product_path(@product)
     else
+      flash[:alert] = 'Review not added, see errors below:'
       render :new
     end
   end
