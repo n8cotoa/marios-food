@@ -1,7 +1,10 @@
-<h1>Mario's Products</h1>
-<p><%= link_to "Add New Product", new_product_path %></p>
-<ul>
-  <% @products.each do |product| %>
-  <li><%= link_to product.name, product_path(product) %></li>
-  <% end %>
-</ul>
+<div class="container">
+  <h1>Mario's Products</h1>
+  <p><%= link_to "Add New Product", new_product_path %></p>
+  <p><%= link_to "Home", landing_pages_path %></p>
+  <ul>
+    <% @products.each do |product| %>
+    <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+</div>
