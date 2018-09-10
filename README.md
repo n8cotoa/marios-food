@@ -1,24 +1,33 @@
-# README
+# Mario's Food Products
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Epicodus: Rails Course: Independent Project Week 1
 
-Things you may want to cover:
+#### Nate Cottle
 
-* Ruby version
+## Description
 
-* System dependencies
+A website used to do display products for a client with CRUD functionality and allow users to add reviews for the products.
 
-* Configuration
+## Setup Requirements
 
-* Database creation
+1. Clone the repo
+1. Delete Gemfile.lock
+1. Run '$bundle install' to bundle Gemfile dependencies
+1. Create the database environments using '$rails:db create'
+1. Recreate the database using '$rails:db migrate'
+1. Install the game database by running '$rails db:seed'
+1. Deploy app locally by running '$rails s'
+1. Go to localhost:3000
 
-* Database initialization
+## Technologies Used
 
-* How to run the test suite
+* Ruby 2.4.1
+* Rails 5.2
+* Postgresql
+* ActiveRecord
 
-* Services (job queues, cache servers, search engines, etc.)
+## License
 
-* Deployment instructions
+This software is licensed under the MIT license.
 
-* ...
+Copyright (c)2018 **  Nate Cottle **
