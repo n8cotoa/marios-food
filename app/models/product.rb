@@ -14,4 +14,13 @@ class Product < ActiveRecord::Base
 
   scope(:made_in_usa, -> {where(origin_country: "USA")})
 
+  def get_avg_rating
+    review_ratings = []
+    self.reviews.each do |review|
+      review_ratings.push(review.rating)
+    end
+    avg_rating = review_ratings.reduce(:+)/review_ratings.length
+    avg_rating
+  end
+
 end
